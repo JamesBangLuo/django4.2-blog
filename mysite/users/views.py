@@ -25,10 +25,8 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-
                 return HttpResponse('登录成功')
             else:
-
                 return HttpResponse('登录失败')
     context = {'form': form}
 
