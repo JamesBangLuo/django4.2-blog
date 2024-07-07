@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'users/base.html' %}
+{% block head %}
     <title>注册页面</title>
-</head>
-<body>
+{% enblock head %}
+{% block content %}
+<div class="box">
+        <h1 class="is-uppercase has-text-centered has-text-weight-bold">玩
+            <br><span class="tag">注册</span>
+        </h1>
+        <hr class="dropdown-divider">
+    <form action="" method="post">
 
-</body>
-</html>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="注册" style="margin-top: 1em" class = "button  is-link  is-fullwidth">
+    </form>
+</div>
+{% enblock content %}

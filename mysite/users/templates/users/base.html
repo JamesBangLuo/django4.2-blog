@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>登录页面</title>
+    {% enblock head %}
+
+    <title>登录页面</title>
+    <link rel="stylesheet" href="{% static 'users/bulma.css' %}">
+</head>
+<body>
+<div class="containr">
+    {% block content %}
+    {% enblock content %}
+<!--    <div class="box">-->
+<!--        <h1 class="is-uppercase has-text-centered has-text-weight-bold">玩-->
+<!--            <br><span class="tag">登录</span>-->
+<!--        </h1>-->
+<!--        <hr class="dropdown-divider">-->
+<!--    <form action="" method="post">-->
+<!--        {% csrf_token %}-->
+<!--    <label for="id_username">用户名：</label>-->
+<!--    <input type="text" name="username" id="id_username">-->
+<!--    <label for="id_password">密码：</label>-->
+<!--    <input type="password" name="password" id="id_password">-->
+<!--    <input type="submit" value="提交">-->
+<!--        {{ form.as_p }}-->
+<!--        <input type="submit" style="margin-top: 1em" class = "button  is-link  is-fullwidth" value="提交">-->
+<!--    </form>-->
+<!--    </div>-->
+</div>
+</body>
+</html>
