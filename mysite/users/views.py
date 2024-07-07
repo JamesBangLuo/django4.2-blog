@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse, redirect
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm
 # Create your views here.
@@ -25,9 +25,17 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return HttpResponse('登录成功')
+                # return HttpResponse('登录成功')
+                return redirect('/admin')
             else:
                 return HttpResponse('登录失败')
     context = {'form': form}
 
     return render(request, 'users/login.html',context)
+def register(request):
+    #注册视图
+    if request.method != "POST":
+        pass
+    else:
+        pass
+    return render(request, 'users/register.html')
